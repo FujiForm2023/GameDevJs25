@@ -29,7 +29,7 @@ namespace GlobalNamespace
     // Inventory for each kingdom and player
     public class Inventory
     {
-        public Dictionary<Resources, int> ResourceCount { get; set; }
+        Dictionary<Resources, int> ResourceCount { get; set; }
 
         public Inventory()
         {
@@ -38,6 +38,38 @@ namespace GlobalNamespace
             {
                 ResourceCount[resource] = 0;
             }
+        }
+
+        // Add resources to the inventory
+        public void AddResource(Resources resource, int amount)
+        {
+            if (ResourceCount.ContainsKey(resource))
+            {
+                ResourceCount[resource] += amount;
+            }
+            else
+            {
+                ResourceCount[resource] = amount;
+            }
+        }
+
+        // Remove resources from the inventory
+        public void RemoveResource(Resources resource, int amount)
+        {
+            if (ResourceCount.ContainsKey(resource) && ResourceCount[resource] >= amount)
+            {
+                ResourceCount[resource] -= amount;
+            }
+            else
+            {
+                Debug.Log("Not enough resources to remove.");
+            }
+        }
+
+        // Get total of resources in the inventory
+        public int GetTotalResources()
+        {
+            return ResourceCount.Values.Sum();
         }
     }
 
@@ -59,52 +91,26 @@ namespace GlobalNamespace
     // Kingdom class representing each kingdom in the game
     public class Kingdom
     {
-        public string Name { get; set; }
-        public Resources MainResource { get; set; }
-        public int Population { get; set; }
-        public int Money { get; set; }
-        public Inventory Inventory { get; set; }
-        public List<Army> Armies { get; set; }
+        public string KingdomName { get; set; }
+        public Resources KingdomMainResource { get; set; }
+        public int KingdomPopulation { get; set; }
+        public int KingdomMoney { get; set; }
+        public Inventory KingdomInventory { get; set; }
+        public List<Army> KingdomArmies { get; set; }
         
         // Constructor for Kingdom class
         public Kingdom(string name, Resources mainResource, int population, int money, Inventory inventory, List<Army> armies)
         {
-            Name = name;
-            MainResource = mainResource;
-            Population = population;
-            Money = money;
-            Inventory = inventory;
-            Armies = armies;
+            KingdomName = name;
+            KingdomMainResource = mainResource;
+            KingdomPopulation = population;
+            KingdomMoney = money;
+            KingdomInventory = inventory;
+            KingdomArmies = armies;
 
-            foreach (Army army in Armies)
+            foreach (Army ThisArmy in KingdomArmies)
             {
-                army.Owner = this;
-            }
-        }
-
-        // Add resources to the kingdom's inventory
-        public void AddResource(Resources resource, int amount)
-        {
-            if (Inventory.ResourceCount.ContainsKey(resource))
-            {
-                Inventory.ResourceCount[resource] += amount;
-            }
-            else
-            {
-                Inventory.ResourceCount[resource] = amount;
-            }
-        }
-
-        // Remove resources from the kingdom's inventory
-        public void RemoveResource(Resources resource, int amount)
-        {
-            if (Inventory.ResourceCount.ContainsKey(resource) && Inventory.ResourceCount[resource] >= amount)
-            {
-                Inventory.ResourceCount[resource] -= amount;
-            }
-            else
-            {
-                Debug.Log("Not enough resources to remove.");
+                ThisArmy.Owner = this;
             }
         }
 
@@ -112,33 +118,33 @@ namespace GlobalNamespace
         public void EndTurn()
         {
             // Calculate resources based on population and main resource
-            int SumOfResources = Inventory.ResourceCount.Values.Sum();
+            int SumOfResources = KingdomInventory.GetTotalResources();
 
             // Add resources based on population and main resource
             foreach (Resources resource in Enum.GetValues(typeof(Resources)))
             {
-                if (resource == MainResource)
+                if (resource == KingdomMainResource)
                 {
-                    AddResource(resource, Population / 10);
+                    KingdomInventory.AddResource(resource, KingdomPopulation / 10);
                 }
                 else
                 {
-                    AddResource(resource, Population / 20);
+                    KingdomInventory.AddResource(resource, KingdomPopulation / 20);
                 }
             }
 
             // Add money based on population and main resource
-            if (MainResource == Resources.Gold)
+            if (KingdomMainResource == Resources.Gold)
             {
-                Money += Population / 5;
+                KingdomMoney += KingdomPopulation / 5;
             }
             else
             {
-                Money += Population / 20;
+                KingdomMoney += KingdomPopulation / 20;
             }
 
             // Add population based on resources
-            Population += Inventory.ResourceCount.Values.Sum() / 100;
+            KingdomPopulation += SumOfResources / 100;
 
             // Player turn begins
         }
