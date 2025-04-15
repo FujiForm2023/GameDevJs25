@@ -26,10 +26,32 @@ namespace GlobalNamespace
         Leather
     }
 
+    // Item that can be used in the game
+    public enum Item
+    {
+        Sword,
+        Shield,
+        Bow,
+        Arrow,
+        Armor
+    }
+
+    public struct Square
+    {
+        public int X { get; set; }
+        public int Y { get; set; }
+        public Square(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
+    }
+
     // Inventory for each kingdom and player
     public class Inventory
     {
         Dictionary<Resources, int> ResourceCount { get; set; }
+        Dictionary<Item, int> ItemCount { get; set; }
 
         public Inventory()
         {
@@ -37,6 +59,12 @@ namespace GlobalNamespace
             foreach (Resources resource in Enum.GetValues(typeof(Resources)))
             {
                 ResourceCount[resource] = 0;
+            }
+
+            ItemCount = new Dictionary<Item, int>();
+            foreach (Item item in Enum.GetValues(typeof(Item)))
+            {
+                ItemCount[item] = 0;
             }
         }
 
@@ -71,20 +99,53 @@ namespace GlobalNamespace
         {
             return ResourceCount.Values.Sum();
         }
+
+        // Add items to the inventory
+        public void AddItem(Item item, int amount)
+        {
+            if (ItemCount.ContainsKey(item))
+            {
+                ItemCount[item] += amount;
+            }
+            else
+            {
+                ItemCount[item] = amount;
+            }
+        }
+
+        // Remove items from the inventory
+        public void RemoveItem(Item item, int amount)
+        {
+            if (ItemCount.ContainsKey(item) && ItemCount[item] >= amount)
+            {
+                ItemCount[item] -= amount;
+            }
+            else
+            {
+                Debug.Log("Not enough items to remove.");
+            }
+        }
+
+        // Get total of items in the inventory
+        public int GetTotalItems()
+        {
+            return ItemCount.Values.Sum();
+        }
     }
 
     // Army class representing each army in the game
     public class Army
     {
-        public Kingdom Owner { get; set; }
-        public int Size { get; set; }
-        public int Strength { get; set; }
-        public int Order { get; set; }
+        public Kingdom ArmyOwner { get; set; }
+        public int ArmySize { get; set; }
+        public int ArmyStrength { get; set; }
+        public int ArmyOrder { get; set; }
+        public Square ArmyPosition { get; set; }
         public Army(int size, int strength, int order)
         {
-            Size = size;
-            Strength = strength;
-            Order = order;
+            ArmySize = size;
+            ArmyStrength = strength;
+            ArmyOrder = order;
         }
     }
 
@@ -97,7 +158,12 @@ namespace GlobalNamespace
         public int KingdomMoney { get; set; }
         public Inventory KingdomInventory { get; set; }
         public List<Army> KingdomArmies { get; set; }
-        
+        public Square KingdomPosition { get; set; }
+        public bool KingdomPlayerIsOwn { get; set; }
+        public bool KingdomIsAngry { get; set; }
+        public byte KingdomSuspiciousLevel { get; set; }
+
+
         // Constructor for Kingdom class
         public Kingdom(string name, Resources mainResource, int population, int money, Inventory inventory, List<Army> armies)
         {
@@ -110,7 +176,7 @@ namespace GlobalNamespace
 
             foreach (Army ThisArmy in KingdomArmies)
             {
-                ThisArmy.Owner = this;
+                ThisArmy.ArmyOwner = this;
             }
         }
 
@@ -146,8 +212,89 @@ namespace GlobalNamespace
             // Add population based on resources
             KingdomPopulation += SumOfResources / 100;
 
+            // Check if kingdom is suspicious at Player
+            if (KingdomSuspiciousLevel > 0)
+            {
+                KingdomSuspiciousLevel--;
+            }
+
             // Player turn begins
         }
 
+    }
+
+    // Task class representing each tasks in the game
+    public class Task
+    {
+        public string TaskName { get; set; }
+        public string TaskDescription { get; set; }
+        public int TaskMoneyReward { get; set; }
+        public Kingdom TaskFromKingdom { get; set; }
+        public Item TaskKingdomRequiredItem { get; set; }
+        public int TaskTimeToComplete { get; set; }
+        public int TaskTimeLeft { get; set; }
+    }
+
+    // Player class representing player in the game
+    public class Player
+    {
+        public string PlayerName { get; set; }
+        public int PlayerMoney { get; set; }
+        public Inventory PlayerInventory { get; set; }
+        public List<Task> PlayerTasks { get; set; }
+        public Square PlayerPosition { get; set; }
+        public Kingdom PlayerKingdom { get; set; }
+
+        // Constructor for Player class
+        public Player(string name, int money, Inventory inventory)
+        {
+            PlayerName = name;
+            PlayerMoney = money;
+            PlayerInventory = inventory;
+            PlayerTasks = new List<Task>();
+            PlayerPosition = new Square(0, 0);
+            PlayerKingdom = null;
+        }
+
+        // Add task to player
+        public void AddTask(Task task)
+        {
+            PlayerTasks.Add(task);
+        }
+
+        // Remove task from player
+        public void RemoveTask(Task task)
+        {
+            PlayerTasks.Remove(task);
+        }
+
+        // Task completed
+        public void CompleteTask(Task task)
+        {
+            if (PlayerTasks.Contains(task))
+            {
+                PlayerTasks.Remove(task);
+                PlayerMoney += task.TaskMoneyReward;
+                PlayerInventory.AddItem(task.TaskKingdomRequiredItem, 1);
+            }
+            else
+            {
+                Debug.Log("Task not found in player's tasks.");
+            }
+        }
+
+        // Task failed
+        public void FailTask(Task task)
+        {
+            if (PlayerTasks.Contains(task))
+            {
+                PlayerTasks.Remove(task);
+                task.TaskFromKingdom.KingdomIsAngry = true;
+            }
+            else
+            {
+                Debug.Log("Task not found in player's tasks.");
+            }
+        }
     }
 }
