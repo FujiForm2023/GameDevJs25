@@ -231,6 +231,7 @@ namespace GlobalNamespace
         public int TaskMoneyReward { get; set; }
         public Kingdom TaskFromKingdom { get; set; }
         public Item TaskKingdomRequiredItem { get; set; }
+        public int TaskKingdomRequiredItemAmount { get; set; }
         public int TaskTimeToComplete { get; set; }
         public int TaskTimeLeft { get; set; }
     }
@@ -276,6 +277,14 @@ namespace GlobalNamespace
                 PlayerTasks.Remove(task);
                 PlayerMoney += task.TaskMoneyReward;
                 PlayerInventory.AddItem(task.TaskKingdomRequiredItem, 1);
+                if (task.TaskFromKingdom.KingdomSuspiciousLevel < 3)
+                {
+                    task.TaskFromKingdom.KingdomSuspiciousLevel = 0;
+                }
+                else
+                {
+                    task.TaskFromKingdom.KingdomSuspiciousLevel -= 3;
+                }
             }
             else
             {
