@@ -154,12 +154,6 @@ namespace GlobalNamespace
         }
     }
 
-    public enum KingdomEnum
-    {
-        RED = 0,
-        BLUE = 1
-    }
-
     // Kingdom class representing each kingdom in the game
     public class Kingdom
     {
@@ -167,20 +161,15 @@ namespace GlobalNamespace
         public Resources KingdomMainResource { get; set; }
         public int KingdomPopulation { get; set; }
         public int KingdomMoney { get; set; }
-        public int KingdomTechLevel { get; set; }
         public Inventory KingdomInventory { get; set; }
         public List<Army> KingdomArmies { get; set; }
         public Square KingdomPosition { get; set; }
         public bool KingdomPlayerIsOwn { get; set; }
         public bool KingdomIsAngry { get; set; }
         public byte KingdomSuspiciousLevel { get; set; }
-<<<<<<< HEAD
         public int KingdomAggressionLevel { get; set; }
         public int KingdomTechLevel { get; set; }
         public KingdomEnum KingdomRule { get; set; } 
-=======
-        public KingdomEnum KingdomEnum { get; set; }
->>>>>>> 6a4254120ae3fdf7732a5410e85b722b74a94e8b
 
 
         // Constructor for Kingdom class
