@@ -149,6 +149,12 @@ namespace GlobalNamespace
         }
     }
 
+    public enum KingdomEnum
+    {
+        RED = 0,
+        BLUE = 1
+    }
+
     // Kingdom class representing each kingdom in the game
     public class Kingdom
     {
@@ -162,6 +168,9 @@ namespace GlobalNamespace
         public bool KingdomPlayerIsOwn { get; set; }
         public bool KingdomIsAngry { get; set; }
         public byte KingdomSuspiciousLevel { get; set; }
+        public int KingdomAggressionLevel { get; set; }
+        public int KingdomTechLevel { get; set; }
+        public KingdomEnum KingdomRule { get; set; } 
 
 
         // Constructor for Kingdom class
@@ -178,6 +187,11 @@ namespace GlobalNamespace
             {
                 ThisArmy.ArmyOwner = this;
             }
+        }
+
+        public Kingdom(KingdomEnum ke)
+        {
+            KingdomRule = ke;
         }
 
         // Turn ended

@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-
+using GlobalNamespace;
 public class WarArea : MonoBehaviour
 {
     public string areaLabelName = "Area Name";

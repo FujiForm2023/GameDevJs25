@@ -1,23 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-
-public enum KingdomEnum
-{
-    RED = 0,
-    BLUE = 1
-}
-
-class Kingdom
-{
-    KingdomEnum kingdomEnum;
-    int aggessionLevel = 0; //-5 ~ 5
-    int techLevel = 0; // how frequent the kingdom upgrades by itself
-    public Kingdom(KingdomEnum ke)
-    {
-        kingdomEnum = ke;
-    } 
-}
+using GlobalNamespace;
 public class KingdomManager : MonoBehaviour
 {
     Kingdom redKingdom = new(KingdomEnum.RED);
