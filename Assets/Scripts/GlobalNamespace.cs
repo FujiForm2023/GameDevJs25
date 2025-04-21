@@ -22,8 +22,7 @@ namespace GlobalNamespace
         Gold,
         Wood,
         Stone,
-        Iron,
-        Leather
+        Iron
     }
 
     // Item that can be used in the game
@@ -46,6 +45,12 @@ namespace GlobalNamespace
             Y = y;
         }
     }
+
+    public enum KingdomEnum
+    {
+        RED = 0,
+        BLUE = 1
+    }   
 
     // Inventory for each kingdom and player
     public class Inventory
@@ -156,12 +161,14 @@ namespace GlobalNamespace
         public Resources KingdomMainResource { get; set; }
         public int KingdomPopulation { get; set; }
         public int KingdomMoney { get; set; }
+        public int KingdomTechLevel { get; set; }
         public Inventory KingdomInventory { get; set; }
         public List<Army> KingdomArmies { get; set; }
         public Square KingdomPosition { get; set; }
         public bool KingdomPlayerIsOwn { get; set; }
         public bool KingdomIsAngry { get; set; }
         public byte KingdomSuspiciousLevel { get; set; }
+        public KingdomEnum KingdomEnum { get; set; }
 
 
         // Constructor for Kingdom class

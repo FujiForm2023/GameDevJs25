@@ -9,11 +9,11 @@ class MinigameManager : MonoBehaviour
     [SerializeField]
     private GameObject[] minigamePrefabs; // Array of minigame prefabs
     private GameObject currentMinigame; // The currently active minigame
-    GlobalNamespace.Resources currentResource { public get; private set; }; // The resource currently being used in the minigame
+    public GlobalNamespace.Resources currentResource; // The resource currently being used in the minigame
 
     public void IronMinigame(){
         // Load the Iron minigame prefab from the Resources folder
-        GameObject ironMinigamePrefab = Resources.Load<GameObject>("IronMinigamePrefab");
+        GameObject ironMinigamePrefab = UnityEngine.Resources.Load<GameObject>("IronMinigamePrefab");
         if (ironMinigamePrefab != null)
         {
             // Instantiate the minigame and set it as the current one
