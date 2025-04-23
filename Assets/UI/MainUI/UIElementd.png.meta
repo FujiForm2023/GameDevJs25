@@ -1,0 +1,667 @@
+fileFormatVersion: 2
+guid: 6ab75f66e27d4084a81657d8a540f9cd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8259711555087411040
+    second: UIElementd_0
+  - first:
+      213: 9088941522699065778
+    second: UIElementd_1
+  - first:
+      213: -7171201408616131866
+    second: UIElementd_2
+  - first:
+      213: 3433075006113896705
+    second: UIElementd_3
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UIElementd_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 160
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c707d77aedcf84ab4d6bb22a517c74
+      internalID: -1411018792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_8
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 224
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a5e6d09cb05ed4690c1a3f0c5c3cfe
+      internalID: 1573373563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_12
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 192
+        width: 192
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47480fa250fa84e4384e50fa9ff19781
+      internalID: 241669487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_17
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 192
+        width: 192
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f199cf61534f93648be76b0f6bcaabdc
+      internalID: 2105820904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2181025022728954dacdfdd3d2a620a6
+      internalID: 288536172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_26
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 392
+        width: 320
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b36a4c5b449ab4d80ab2bb7d6c9fd0
+      internalID: 126695867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_27
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 388
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d5f147d1889e941a1e7572af2589df
+      internalID: -1034078496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_33
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 128
+        width: 288
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c13b348d1dcba4580eda2f0d037f0c
+      internalID: -1559745527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e822d2031ebc15468417dfae67e1df6
+      internalID: -1198993293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_49
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b71c8db769f7e4b83c30b446d2e6b0
+      internalID: 607807058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_50
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 32
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7009592c455f42458f0646b87fb6eaf
+      internalID: 1043655481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_61
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 96
+        width: 64
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b583a3bf683f6f7479a030e1c7cfb15f
+      internalID: -1731744042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_64
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcdc198fba4cdb488c23163c0c6426c
+      internalID: 447409065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_65
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735d0d4b3d272de4da634b417ca037f8
+      internalID: -908234922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_78
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 128
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11f0ac446d49834490281acda462446
+      internalID: -963648369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_79
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8282b97b6c5059d4f8ffc3170a08e94d
+      internalID: 2068154245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_80
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bad061c2ac8ac044b26688f779100a0
+      internalID: -41204198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_1
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 32
+        width: 336
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0128da30d2d1f74e819703665c3be68
+      internalID: 1062046754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 64
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e29403f629c38469bb34ce364afb2c
+      internalID: -1402965179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElementd_3
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 288
+        width: 128
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c408a475b8c564aa712ac63efea63c
+      internalID: 708862965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2455a3fbaa68d0147bdfacb5d0397c65
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      UIElementd_0: -1411018792
+      UIElementd_1: 1062046754
+      UIElementd_10: 1702987518
+      UIElementd_11: 1913357239
+      UIElementd_12: 241669487
+      UIElementd_13: 11415071
+      UIElementd_14: -328550987
+      UIElementd_15: 890155532
+      UIElementd_16: -601317240
+      UIElementd_17: 2105820904
+      UIElementd_18: 462016764
+      UIElementd_19: 702809764
+      UIElementd_2: -1402965179
+      UIElementd_20: 1757037142
+      UIElementd_21: 288536172
+      UIElementd_22: 1088100832
+      UIElementd_23: 776427821
+      UIElementd_24: -330127238
+      UIElementd_25: 762525263
+      UIElementd_26: 126695867
+      UIElementd_27: -1034078496
+      UIElementd_28: 807166312
+      UIElementd_29: -667577804
+      UIElementd_3: 708862965
+      UIElementd_30: -2068587518
+      UIElementd_31: 1365477220
+      UIElementd_32: 576854735
+      UIElementd_33: -1559745527
+      UIElementd_34: -1198993293
+      UIElementd_35: 1734439780
+      UIElementd_36: -1433502075
+      UIElementd_37: -125246794
+      UIElementd_38: 278451984
+      UIElementd_39: 1923061488
+      UIElementd_4: 264583372
+      UIElementd_40: -1816558408
+      UIElementd_41: -1803770277
+      UIElementd_42: -1357024548
+      UIElementd_43: 811042613
+      UIElementd_44: -500372043
+      UIElementd_45: 312130429
+      UIElementd_46: -1974808004
+      UIElementd_47: -1840948027
+      UIElementd_48: 1648840504
+      UIElementd_49: 607807058
+      UIElementd_5: 1479248794
+      UIElementd_50: 1043655481
+      UIElementd_51: 868910954
+      UIElementd_52: -171192850
+      UIElementd_53: -1411839377
+      UIElementd_54: 599034883
+      UIElementd_55: 922735204
+      UIElementd_56: -300419480
+      UIElementd_57: -92894212
+      UIElementd_58: -377535442
+      UIElementd_59: 483666707
+      UIElementd_6: 1531886957
+      UIElementd_60: 1233455907
+      UIElementd_61: -1731744042
+      UIElementd_62: -2097144264
+      UIElementd_63: 1151256686
+      UIElementd_64: 447409065
+      UIElementd_65: -908234922
+      UIElementd_66: -1710216466
+      UIElementd_67: 964587073
+      UIElementd_68: -149357161
+      UIElementd_69: 255874048
+      UIElementd_7: -456433081
+      UIElementd_70: 1216681354
+      UIElementd_71: -1111599967
+      UIElementd_72: 1580804712
+      UIElementd_73: -641190127
+      UIElementd_74: -910191429
+      UIElementd_75: 762105438
+      UIElementd_76: 896010622
+      UIElementd_77: -1133467332
+      UIElementd_78: -963648369
+      UIElementd_79: 2068154245
+      UIElementd_8: 1573373563
+      UIElementd_80: -41204198
+      UIElementd_81: -2030781765
+      UIElementd_82: 317563916
+      UIElementd_83: -306182012
+      UIElementd_84: -1030803090
+      UIElementd_9: -655158576
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
