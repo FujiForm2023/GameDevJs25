@@ -10,12 +10,21 @@ using GlobalNamespace;
 
 class GameManager : MonoBehaviour
 {
-    private GameState currentState;
-    private List<Kingdom> kingdoms = new List<Kingdom>();
-    private Player player;
 
-    void Start()
+    // Menu Buttons
+    public void StartGame()
     {
-        currentState = GameState.MainMenu;
+        
+        SceneManager.LoadScene(1);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void Options()
+    {
+        Debug.Log("Options clicked, not implemented yet.");
     }
 }
